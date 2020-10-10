@@ -48,6 +48,10 @@ header {
     padding-bottom: 0px;
     }
     
+p {
+    font-family: var(--paragraph-font);
+}
+
 section {
     margin-left: 100px;
     margin-right: 100px;
