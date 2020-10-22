@@ -11,7 +11,6 @@
     --paragraph-font: Lato, Helvetica, sans-serif;
 }
 
-
 body {
     font-size: 16px;
     background-color: var(--primary-color);
@@ -21,16 +20,21 @@ body {
     margin-bottom: 0px;
 }
 
-header, footer {
+header,
+footer {
     background-color: var(--secondary-color);
 }
 
-header, main, footer {
-    max-width: 960px;   /* supplied in assignment */
-    margin: 0 auto;     /* supplied in assignment */
+header,
+main,
+footer {
+    max-width: 960px;
+    /* supplied in assignment */
+    margin: 0 auto;
+    /* supplied in assignment */
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
-  }
+}
 
 #header_logo {
     width: 100px;
@@ -47,8 +51,8 @@ header, main, footer {
 header {
     margin-top: 20px;
     padding: 5px 0px;
-	display: flex;
-	align-items: center;
+    display: flex;
+    align-items: center;
     justify-content: center;
 }
 
@@ -74,7 +78,8 @@ header a {
     min-width: 70px;
 }
 
-.nav a:link, nav a:visited {
+.nav a:link,
+nav a:visited {
     color: var(--accent1-color);
 }
 
@@ -83,7 +88,11 @@ header a {
     background-color: var(--accent1-color);
 }
 
-h2, h3, h4, h5, h6 {
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: var(--heading-font);
     color: var(--tertiary-color);
     padding: 1rem 1rem 0rem 1rem;
@@ -94,27 +103,35 @@ p {
     padding: 0rem 2rem 0rem 2rem;
 }
 
-.home-away, .wedding-receptions, .family-search-center {
+.home-away,
+.wedding-receptions,
+.family-search-center {
     background-color: var(--accent2-color);
     margin-bottom: 1.25rem;
-    padding-bottom: 1rem   
+    padding-bottom: 1rem
 }
 
 .contact {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: grid;
+    padding: 0 50px;
 }
 
 .social {
     list-style-type: none;
-    text-align: center;
-    flex: 1 1 auto;
+    grid-row: 1;
+    grid-column: 2 / 3;
+    justify-self: end;
+    padding-top: 20px;
+}
+
+.social a {
+    text-decoration: none;
 }
 
 .social img {
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
+    margin: 10px;
 }
 
 .copyright {
