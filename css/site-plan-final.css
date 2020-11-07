@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Handlee&family=Lato&display=swap');
+
+:root {
+    --primary-color: #f3e9dc;
+    --secondary-color: #c08552;
+    --tertiary-color: #5e3023;
+    --accent1-color: #895737;
+    --accent2-color: #dab49d;
+    /* --heading-font: "IM Fell French Canon SC"; */
+    --heading-font: 'Handlee', cursive, sans-serif;
+    --paragraph-font: Lato, Helvetica, sans-serif;
+}
+
+html {
+    background-color: var(--primary-color);
+}
+
+body {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 1em;
+}
+
+img {
+    max-width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--heading-font);
+    color: var(--accent2-color);
+}
+
+header {
+    padding: 1em;
+    text-align: center;
+    color: var(--accent2-color);
+    background-color: var(--secondary-color);
+}
+
+header>h1 {
+    color: var(--primary-color);
+}
+
+.signature {
+    color: var(--tertiary-color);
+}
+
+p {
+    font-family: var(--paragraph-font);
+    color: var(--tertiary-color);
+    padding: 1em;
+}
+
+.colors {
+    width: 100%;
+    min-width: 350px;
+    margin: auto;
+    text-align: center;
+    font-family: var(--paragraph-font);
+}
+
+.colors th {
+    background-color: #999;
+}
+
+.colors td {
+    width: 20%;
+    height: 3em;
+}
+
+.colored {
+    color: var(--accent1-color);
+}
+
+.primary {
+    background-color: var(--primary-color);
+}
+
+.secondary {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+.tertiary {
+    background-color: var(--tertiary-color);
+    color: var(--primary-color);
+}
+
+.accent1 {
+    background-color: var(--accent1-color);
+    color: var(--primary-color);
+}
+
+.accent2 {
+    background-color: var(--accent2-color);
+}
+
+nav {
+    background-color: var(--secondary-color);
+    line-height: 3em;
+    text-align: center;
+    font-size: 1.2em;
+    font-family: var(--paragraph-font);
+}
+
+nav>ul {
+    list-style-type: none;
+    display: flex;
+}
+
+nav a {
+    padding: 1em;
+    min-width: 70px;
+}
+
+nav a:link, nav a:visited {
+    color: var(--primary-color);
+}
+
+nav a:hover {
+    color: var(--primary-color);
+    background-color: var(--accent1-color);
+}
