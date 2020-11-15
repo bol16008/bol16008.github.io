@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temple Inn & Suites | Your Home Away From Home | 215-529-9999</title>
+    <meta name="description"
+        content="The main landing page for Temple Inn & Suites which offers hotel accommodations near temple locations of The Church of Jesus Christ of Latter-day Saints.">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <a href="index.html">
+            <picture class="heading">
+                <img id="header_logo" src="images/icon-256.png" alt="Temple Inn & Suites Logo" />
+
+            </picture>
+        </a>
+        <section class="heading">
+            <a href="index.html">
+                <h1>Temple Inn & Suites</h1>
+            </a>
+        </section>
+        <nav>
+            <ul class="heading nav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="amenities.html">Amenities</a></li>
+                <li><a href="temple-spotlight.html">Temple Spotlight</a></li>
+                <li><a href="reservations.html">Reservations</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+
+        <h2>
+            <div id="feedback"></div>
+            <div id="res-form-head">Reservations</div>
+        </h2>
+
+        <form id="res-form" action="/take-reservation-page" method="post">
+            <ul>
+                <li>
+                    <label for="check-in-date">Check-in Date:</label><br>
+                    <input type="date" id="check-in-date" required name="check-in">
+                </li>
+                <li>
+                    <label for="check-out-date">Check-out Date:</label><br>
+                    <input type="date" id="check-out-date" required name="check-out">
+                </li>
+                <li>
+                    <label for="guest-count">Number of guests:</label><br>
+                    <select id="guest-count" name="guests">
+                        <option value="null"></option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10plus">10+</option>
+                    </select>
+                </li>
+                <li>
+                    <label for="room-count">Number of rooms:</label><br>
+                    <select id="room-count" name="rooms">
+                        <option value="1" selected>1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5plus">5+</option>
+                    </select>
+                </li>
+                <li>
+                    <label for="first-name">First Name:</label><br>
+                    <input type="text" id="first-name" name="user_name" required pattern="[a-zA-Z]+">
+                </li>
+                <li>
+                    <label for="name-last">Last Name:</label><br>
+                    <input type="text" id="name-last" name="last-name" required pattern="\w{2}\w*">
+                </li>
+                <li>
+                    <label for="email-addr">Email Address:</label><br>
+                    <input type="email" id="email-addr" name="email" required placeholder="abc@xyz.com">
+                </li>
+                <li>
+                    <label for="telephone">Telephone:</label><br>
+                    <input type="text" id="telephone" name="phone" required pattern="\d{3}[\-]?\d{3}[\-]?\d{4}" placeholder="###-###-####">
+                </li>
+                <li class="button">
+                    <button type="submit">Submit Reservation!</button>
+                </li>
+            </ul>
+
+
+        </form>
+    </main>
+    <footer>
+        <div class="contact-icon">📍</div>
+        <div class="address">
+            <a class="map_link"
+                href="https://www.google.com/maps/place/MD-355+%26+Wisconsin+Ave,+Bethesda,+MD+20892/@39.0025426,-77.0995054,17z/data=!3m1!4b1!4m5!3m4!1s0x89b7c9597bbbb359:0x31f41bf3d51aff62!8m2!3d39.0025426!4d-77.0973167">
+                Temple Inn & Suites Headquarters<br>
+                355 Wisconsin Avenue<br>
+                Bethesda, MD 20814
+            </a>
+        </div>
+        <div class="contact-icon">☏</div>
+        <div class="phone">215-829-9999</div>
+        <div class="contact-icon">✉️</div>
+        <div class="email"><a href="mailto:info@templinn.com">info@templinn.com</a></div>
+        <nav class="social">
+            <a href="https://facebook.com">
+                <img src="images/FB-f-Logo__blue_144.png" alt="Facebook icon">
+            </a>
+            <a href="https://twitter.com">
+                <img src="images/twitter_social_icon_rounded_square_color.png" alt="Twitter icon">
+            </a>
+            <a href="https://instagram.com">
+                <img src="images/instagram-glyph-logo_May2016.png" alt="Instagram icon">
+            </a>
+        </nav>
+        <div class="copyright">Copyright &copy;2020 Temple Inn & Suites | All Rights Reserved | <a href="#">Privacy
+                & Cookie Statement</a> | Reid Bolander
+        </div>
+
+    </footer>
+    <script>
+        // get the feedback div element so we can do something with it.
+        const feedbackElement = document.getElementById('feedback');
+        // get the form element so we can read what was entered in it.
+        const formElement = document.forms[0];
+        
+        // Want to hide the form after the user submits a reservation
+        const reservationForm = document.getElementById('res-form');
+        const resFormHead = document.getElementById('res-form-head');
+
+        // add a 'listener' to wait for a submission of our form. When that happens run the code below.
+        formElement.addEventListener('submit', function(e) {
+          // stop the form from doing the default action
+          e.preventDefault();
+          // set the contents of our feedback element to a message letting the user know the form was submitted successfully. Notice that we pull the name that was entered in the form to personalize the message!
+          feedbackElement.innerHTML = 'Hello '+ formElement.user_name.value +'! Thank you for your message. We will get back with you as soon as possible!';
+          // make the feedback element visible.
+          feedbackElement.style.display = "block";
+          // Hide the reservation form after submit
+          reservationForm.style.display = "none";
+          resFormHead.style.display = "none";
+        });
+      </script>
+</body>
+
+</html>
