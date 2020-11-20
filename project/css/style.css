@@ -275,7 +275,6 @@ label {
     display: grid;
     grid-template-columns: 33% auto;
     grid-gap: 2rem;
-    
 }
 
 .spotlight h2 {
@@ -285,15 +284,13 @@ label {
 }
 
 .spotlight h3 {
-    padding: 1rem;
-}
-
-.spotlight img {
-    grid-column: 1 / 2;
-    grid-row: 2 / 3;
+    padding: 1rem 1rem 0 1rem;
 }
 
 .spotlight-photo {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    justify-self: center;
     width: 300px;
     height: auto;
     margin-left: 2rem;
@@ -308,22 +305,28 @@ label {
 .quick-facts {
     grid-column: 1 / 2;
     grid-row: 3 / 4;
+    justify-self: center;
     border-style: solid;
-    border-radius: 4px;
-    margin-top: 2rem;
     margin-left: 2rem;
-    margin-bottom: 1rem;
+    margin-top: 2rem;
     padding-bottom: 1rem;
-}
-
-.quick-facts table {
-    grid-column: 1 / 2;
     font-family: var(--paragraph-font);
-    padding: 0rem 0.5rem;
+    border-collapse: collapse;
 }
 
-.quick-facts table td {
+.quick-facts caption {
+    padding-bottom: 0;
+
+}
+
+.quick-facts td {
     border-style: solid;
     border-width: 1px;
-    padding: 0rem 0.5rem;
+    padding: 0.25rem 0.5rem;
 }
+
+
+/*************************************************************/
+/* This section is primarily for the Amenities Page */
+/*************************************************************/
+
