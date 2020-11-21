@@ -293,7 +293,7 @@ label {
     justify-self: center;
     width: 300px;
     height: auto;
-    margin-left: 2rem;
+    
 }
 
 .history {
@@ -305,9 +305,9 @@ label {
 .quick-facts {
     grid-column: 1 / 2;
     grid-row: 3 / 4;
-    justify-self: center;
+    max-width: 330px;
     border-style: solid;
-    margin-left: 2rem;
+    
     margin-top: 2rem;
     padding-bottom: 1rem;
     font-family: var(--paragraph-font);
@@ -316,13 +316,24 @@ label {
 
 .quick-facts caption {
     padding-bottom: 0;
-
+    padding-top: 0;
 }
 
 .quick-facts td {
     border-style: solid;
     border-width: 1px;
     padding: 0.25rem 0.5rem;
+    width: 150px;
+}
+
+.quick-facts .qf-desc {
+
+    max-width: 100px;
+}
+
+.quick-facts .qf-data {
+    max-width: 200px;
+     
 }
 
 
