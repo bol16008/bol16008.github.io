@@ -1,12 +1,6 @@
 /* Import the fonts */
 @import url('https://fonts.googleapis.com/css?family=Sansita+Swashed:wght@500|Lato:wght@700');
 
-@media screen and (max-width: 550px) {
-    .______ {
-        display: block;
-    }
-}
-
 :root {
     --primary-color: #F7F9FB;
     --primary-color-translucent: rgba(247, 249, 251, 0.8);
@@ -400,4 +394,20 @@ select {
 .amenities-even-container h3 {
     text-align: right;
     margin: 1rem;
+}
+
+@media screen and (max-width: 550px) {
+    header, 
+    .nav,
+    .home-away,
+    .wedding-receptions,
+    footer,
+    .banner-box,
+    #res-form,
+    #res-form ul,
+    .spotlight,
+    .amenities-odd-container,
+    .amenities-even-container {
+        display: block;
+    }
 }
