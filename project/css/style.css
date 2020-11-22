@@ -22,7 +22,7 @@
 body {
     font-size: 16px;
     background-color: var(--primary-color);
-    margin: 0px 0px 0px 0px;
+    margin: 0;
 }
 
 header,
@@ -62,7 +62,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 0px;
+    margin-top: 0;
 }
 
 header a {
@@ -260,7 +260,7 @@ label {
 #res-form input,
 select {
     font-size: 1rem;
-    padding: 0.25rem 0.25rem 0.25rem 0.25rem;
+    padding: 0.25rem 1rem 0.25rem 0.25rem;
 }
 
 #res-form button {
