@@ -3,18 +3,18 @@
 
 @media screen and (max-width: 550px) {
     .______ {
-      display: block;
+        display: block;
     }
 }
 
 :root {
     --primary-color: #F7F9FB;
-    --primary-color-translucent: rgba(247,249,251,0.8);
+    --primary-color-translucent: rgba(247, 249, 251, 0.8);
     --secondary-color: #8FC1E3;
     --tertiary-color: #475747;
     --accent1-color: #00334b;
     --accent2-color: #a6a7a6;
-    --accent2-color-translucent: rgba(166,167,166, 0.8);
+    --accent2-color-translucent: rgba(166, 167, 166, 0.8);
     --heading-font: 'Sansita Swashed', cursive, sans-serif;
     --paragraph-font: Lato, Helvetica, sans-serif;
 }
@@ -104,12 +104,12 @@ h5,
 h6 {
     font-family: var(--heading-font);
     color: var(--tertiary-color);
-    padding: 1rem 1rem 0rem 1rem;
+    padding: 1rem 1rem 0 1rem;
 }
 
 p {
     font-family: var(--paragraph-font);
-    padding: 0rem 2rem 0rem 2rem;
+    padding: 0 2rem 0 2rem;
 }
 
 .home-away,
@@ -135,7 +135,8 @@ p {
 
 .home-away img,
 .wedding-receptions img,
-.spotlight-photo {
+.spotlight-photo,
+.amenities img {
     align-self: center;
     justify-self: center;
     border-style: solid;
@@ -195,12 +196,12 @@ footer {
     display: grid;
     grid-template-columns: 0.4fr 0.4fr;
 }
-    
+
 .banner-box img {
     grid-column: 1 / -1;
     grid-row: 1;
 }
-    
+
 .action {
     grid-column: 1;
     grid-row: 1;
@@ -209,7 +210,7 @@ footer {
     padding: 0.1em;
     text-align: center;
 }
-    
+
 .action button {
     line-height: 2em;
     width: 10em;
@@ -217,21 +218,30 @@ footer {
     font-size: 1.2em;
     color: var(--primary-color);
 }
+
 /*************************************************************/
 /* This section is primarily for the reservations page */
 /*************************************************************/
 
 #feedback h2 {
     border-style: dotted;
-    background-color: var(--accent2-color-translucent);
-    padding-bottom: 1rem;
-    display: none; /* This element is invisible until the form is submitted successfully */
+    /* background-color: var(--accent2-color-translucent); */
+    display: none;
+    /* This element is invisible until the form is submitted successfully */
+}
+
+#res-form-head h2,
+#feedback h2 {
+    /* padding-bottom: 1rem; */
+    padding: 0;
+    background-color: var(--primary-color);
+    margin-bottom: 2rem;
 }
 
 #res-form {
     display: block;
     background-color: var(--accent2-color);
-    
+
 }
 
 #res-form ul {
@@ -247,7 +257,8 @@ label {
     font-family: var(--paragraph-font);
 }
 
-#res-form input,select {
+#res-form input,
+select {
     font-size: 1rem;
     padding: 0.25rem 0.25rem 0.25rem 0.25rem;
 }
@@ -260,7 +271,7 @@ label {
     background-color: var(--primary-color-translucent);
     border-color: var(--accent1-color);
     border-radius: 6px;
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.5);
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.5);
 }
 
 .button {
@@ -293,7 +304,7 @@ label {
     justify-self: center;
     width: 300px;
     height: auto;
-    
+
 }
 
 .history {
@@ -307,7 +318,7 @@ label {
     grid-row: 3 / 4;
     max-width: 330px;
     border-style: solid;
-    
+
     margin-top: 2rem;
     padding-bottom: 1rem;
     font-family: var(--paragraph-font);
@@ -327,13 +338,11 @@ label {
 }
 
 .quick-facts .qf-desc {
-
     max-width: 100px;
 }
 
 .quick-facts .qf-data {
     max-width: 200px;
-     
 }
 
 
@@ -341,3 +350,52 @@ label {
 /* This section is primarily for the Amenities Page */
 /*************************************************************/
 
+.amenities {
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+}
+
+.amenities h2 {
+    padding: 0;
+    background-color: var(--primary-color);
+    margin-bottom: 2rem;
+}
+
+.amenities-odd-container,
+.amenities-even-container {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    flex: 1 0 auto;
+    height: auto;
+    width: 960px;
+    background-color: var(--accent2-color);
+}
+
+.amenities-odd-container {
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.amenities img {
+    width: 300px;
+    height: auto;
+    flex: 1 0 auto;
+    margin: 2rem 3rem 2rem 3rem;
+}
+
+.amenities-odd-container h3,
+.amenities-odd-container p,
+.amenities-even-container p {
+    margin: 1rem;
+}
+
+.amenities-even-container {
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+}
+
+.amenities-even-container h3 {
+    text-align: right;
+    margin: 1rem;
+}
