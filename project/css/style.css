@@ -223,15 +223,17 @@ footer {
 /* This section is primarily for the reservations page */
 /*************************************************************/
 
-#feedback h2 {
-    border-style: dotted;
-    /* background-color: var(--accent2-color-translucent); */
-    display: none;
-    /* This element is invisible until the form is submitted successfully */
+#feedback {
+    border-style: dotted;    /* background-color: var(--accent2-color-translucent); */
+    display: none;     /* This element is invisible until the form is submitted successfully */
+    font-family: var(--heading-font);
+    color: var(--tertiary-color);
+    padding: 0 1rem 0 1rem;
+    background-color: var(--primary-color);
+    margin-bottom: 2rem;
 }
 
-#res-form-head h2,
-#feedback h2 {
+#res-form-head h2{
     /* padding-bottom: 1rem; */
     padding: 0;
     background-color: var(--primary-color);
