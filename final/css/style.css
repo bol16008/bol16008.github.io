@@ -1,0 +1,33 @@
+/* Import the fonts */
+@import url('https://fonts.googleapis.com/css?family=Sansita+Swashed:wght@500|Lato:wght@700');
+
+:root {
+    --primary-color: #f3e9dc;
+    --secondary-color: #c08552;
+    --tertiary-color: #5e3023;
+    --accent1-color: #895737;
+    --accent2-color: #dab49d;
+    --heading-font: 'Sansita Swashed', cursive, sans-serif;
+    --paragraph-font: Lato, Helvetica, sans-serif;
+}
+
+body {
+    font-size: 16px;
+    background-color: var(--primary-color);
+    margin: 0;
+}
+
+header,
+footer {
+    background-color: var(--secondary-color);
+    max-width: 960px;
+    /* supplied in assignment */
+    margin: 0 auto;
+    /* supplied in assignment */
+    padding-top: 0.5rem;
+}
+
+main {
+    max-width: 960px;
+    margin: 0 auto;
+}
