@@ -13,19 +13,25 @@
             margin: 2rem;
             width: 320px;
             box-shadow: 0px 0px 0px 8px #eee;
-            border-radius: 1px;
+            border-radius: 3px;
             border-style: solid;
             border-color: #ccc;
             border-width: 1px;
             background-color: white;
             font-family: Arial, Helvetica, sans-serif;
             color: #000000;
+            overflow: hidden;
         }
 
         .card p {
             margin: 0;
             padding: 1rem 1rem;
-            overflow: hidden;
+        }
+
+        footer {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: baseline;
         }
 
         form {
@@ -36,7 +42,7 @@
         .viewButton, .editButton {
             color: #777;
             font-size: 14px;
-            font-weight: 350;
+            font-weight: 300;
             border-style: solid;
             border-width: 1px;
             border-color: black;
@@ -58,7 +64,8 @@
             color: #777;
             font-size: 13px;
             font-weight: 300;
-            text-align: right;
+            justify-self: right;
+            padding-right: 1rem;
         }
 
     </style>
@@ -70,8 +77,8 @@
         <footer>
             <form>
                 <input type="button" class="viewButton" value="View"><input type="button" class="editButton" value="Edit">
-                <span>9 mins</span>
             </form>
+            <span>9 mins</span>
         </footer>
     </article>
 </body>
