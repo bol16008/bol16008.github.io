@@ -9,6 +9,7 @@
     --accent2-color: #dab49d;
     --heading-font: 'Handlee', cursive, sans-serif;
     --paragraph-font: Lato, Helvetica, sans-serif;
+    --max-width: 960px;
 }
 
 body {
@@ -21,7 +22,7 @@ body {
 header,
 footer {
     background-color: var(--secondary-color);
-    max-width: 960px;
+    max-width: var(--max-width);
     margin: 0 auto;
     font-family: var(--heading-font);
 }
@@ -30,6 +31,36 @@ header {
     display: flex;
     flex-direction: row;
 }
+
+/* This section formats the footer */
+footer {
+    
+    margin-top: 2rem;
+}
+
+.social {
+
+    
+    text-align: right;
+}
+
+.social a {
+    text-decoration: none;
+}
+.social img {
+    width: 30px;
+    margin: 10px;
+}
+
+.credits {
+    padding: 0 1rem 1rem;
+    text-align: center;
+}
+
+
+
+/* End of footer formatting */
+
 
 figcaption {
     display: table-caption;
@@ -43,8 +74,7 @@ figcaption {
     border-style: solid;
     border-width: 1px;
     border-color: var(--tertiary-color);
-    width: fit-content;
-
+    width: 64px;
 }
 
 .heading {
@@ -52,36 +82,23 @@ figcaption {
     flex-grow: 0;
     margin: 0;
     padding: 0;
+    text-decoration: none;
 }
 
 .heading h1 {
     margin-top: 1.5rem;
-    
 }
-
-.heading {
-    text-decoration: none;
-}
-
-
 
 .heading a:link,
 .heading a:visited {
     color: var(--tertiary-color);
 }
 
-footer p {
-    text-align: center;
-}
-
 .ham-nav {
     flex-grow: 1;
-    flex-shrink: 1;
-    
-    
+    flex-shrink: 1;    
     width: max-content;
     padding-top: 2rem;
-    
 }
 
 .ham-nav label, #hamburger {
@@ -103,15 +120,20 @@ footer p {
     flex-shrink: 1;
 }
 
+.ham-nav a:hover {
+    background-color: var(--tertiary-color);
+    color: var(--primary-color);
+}
+
 @media screen and (max-width: 700px) {
 
     header {
-        display: block;
+        display: inline-block;
         flex-direction: unset;
     }
 
     .ham-nav label {
-        display: inline-block;
+        display: block;
         color: var(--primary-color);
         background: var(--tertiary-color);
         font-style: normal;
@@ -152,7 +174,7 @@ footer p {
 }
 
 main {
-    max-width: 960px;
+    max-width: var(--max-width);
     margin: 0 auto;
 }
 
@@ -162,11 +184,6 @@ main {
     text-align: center;
     font-size: 1rem;
     font-weight: 600;
-}
-
-.nav a:hover {
-    background-color: var(--tertiary-color);
-    color: var(--primary-color);
 }
 
 .nav li {
@@ -209,6 +226,11 @@ h2 {
     
 }
 
+p {
+    margin: 0 3rem;
+}
+
 .h-image {
     margin: 2rem;
 }
+
