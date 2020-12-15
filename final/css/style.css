@@ -234,3 +234,8 @@ p {
     margin: 2rem;
 }
 
+.recipe {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+
