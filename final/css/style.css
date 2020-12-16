@@ -201,9 +201,14 @@ h2 {
     border-color: var(--tertiary-color);
 }
 
-.starter-recipes {
+/* .starter-recipes {
     column-count: 2;
     column-gap: 3rem;
+} */
+
+.container {
+    display: grid;
+    grid-gap: 6rem;
 }
 
 .starter-img {
@@ -222,6 +227,10 @@ p {
 
 .h-image {
     margin: 2rem;
+}
+
+.storing {
+    float: right;
 }
 
 .recipe {
