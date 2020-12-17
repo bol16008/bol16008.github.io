@@ -60,6 +60,7 @@ figcaption {
     display: table-caption;
     caption-side: bottom;
     width: 100%;
+    padding: 2px;
 
 }
 
@@ -245,6 +246,11 @@ h2 {
     flex-direction: row;
 }
 
+.card p {
+    margin: 0;
+    padding: 1rem 1rem;
+}
+
 p {
     margin: 0 3rem;
     padding-bottom: 1rem;
@@ -252,10 +258,25 @@ p {
 
 .h-image {
     margin: 2rem;
+    box-shadow: 0px 0px 0px 8px var(--accent2-color);
+    border-radius: 3px;
+    border-style: solid;
+    border-color: var(--tertiary-color);
+    border-width: 1px;
+    background-color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #000000;
+    overflow: hidden;
 }
 
 .storing {
-    float: right;
+    display: grid;
+    grid-template-columns: 2.5fr auto;
+}
+
+.nurturing {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
 
 .recipe {
