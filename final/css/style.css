@@ -119,54 +119,6 @@ figcaption {
     color: var(--primary-color);
 }
 
-@media screen and (max-width: 700px) {
-
-    header {
-        display: inline-block;
-        flex-direction: unset;
-    }
-
-    .ham-nav label {
-        display: block;
-        color: var(--primary-color);
-        background: var(--tertiary-color);
-        font-style: normal;
-        font-size: 1.8em;
-        padding: 5px;
-        
-    }
-
-    .ham-items a {
-        box-sizing: border-box;
-        display: block;
-        width: 100%;
-        border-top: 1px solid var(--accent1-color);
-        color: var(--tertiary-color)
-    }
-  
-    .heading h1 {
-        margin-top: 0.5rem;
-
-    }
-
-    .ham-items {
-        display: none;
-    }
-
-    .ham-nav input:checked ~ .ham-items {
-        display: block;
-    }
-  
-    #header_logo {
-        width: 50px;
-        margin-top: 0;
-        margin-left: 0;
-        margin-bottom: 0;
-    }
-
-
-}
-
 main {
     max-width: var(--max-width);
     margin: 0 auto;
@@ -199,6 +151,7 @@ h2 {
     background-color: var(--accent2-color);
     border-style: solid;
     border-color: var(--tertiary-color);
+    padding: 0.5rem 0.5rem;
 }
 
 /* .starter-recipes {
@@ -216,6 +169,11 @@ h2 {
     display: table;
 }
 
+.gear-img {
+    width: 175px;
+    display: table;
+}
+
 .h-image-container {
     display: flex;
     flex-direction: row;
@@ -223,6 +181,7 @@ h2 {
 
 p {
     margin: 0 3rem;
+    padding-bottom: 1rem;
 }
 
 .h-image {
@@ -235,6 +194,7 @@ p {
 
 .recipe {
     display: grid;
+    grid-gap: 4rem;
     grid-template-columns: 1fr 2fr;
     grid-template-rows: 10rem 1fr;
 }
@@ -321,4 +281,63 @@ p {
   
 .v-image {
     margin-top: 3rem;
+}
+
+/* A weak attmep to make some of the design elements scale with display width */
+
+@media screen and (max-width: 700px) {
+
+    header {
+        display: block;
+        flex-direction: unset;
+    }
+
+    .ham-nav label {
+        display: block;
+        color: var(--primary-color);
+        background: var(--tertiary-color);
+        font-style: normal;
+        font-size: 1.8em;
+        padding: 5px;
+        
+    }
+
+    .ham-nav {
+        padding-top: 0;
+        width: 100%;
+    }
+
+    .ham-items a {
+        box-sizing: border-box;
+        display: block;
+        width: 100%;
+        border-top: 1px solid var(--accent1-color);
+        color: var(--tertiary-color)
+    }
+  
+    .heading h1 {
+        margin-top: 0.5rem;
+
+    }
+
+    .ham-items {
+        display: none;
+    }
+
+    .ham-nav input:checked ~ .ham-items {
+        display: block;
+    }
+
+    .h-image-container, .gear-img, .starter-img {
+        display: block;
+    }
+  
+    #header_logo {
+        width: 50px;
+        margin-top: 0;
+        margin-left: 0;
+        margin-bottom: 0;
+    }
+
+
 }
