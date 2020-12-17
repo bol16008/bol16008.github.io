@@ -21,7 +21,7 @@ body {
 
 header,
 footer {
-    background-color: var(--secondary-color);
+    background-color: var(--accent2-color);
     max-width: var(--max-width);
     margin: 0 auto;
     font-family: var(--heading-font);
@@ -153,10 +153,11 @@ main {
 } */
 
 h2 {
-    background-color: var(--accent2-color);
+    background-color: var(--accent1-color);
     border-style: solid;
     border-color: var(--tertiary-color);
     padding: 0.5rem 0.5rem;
+    color: var(--primary-color);
 }
 
 .contact-us {
