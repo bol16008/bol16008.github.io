@@ -32,6 +32,10 @@ header {
     flex-direction: row;
 }
 
+header h1 {
+    font-size: 2rem;
+}
+
 /* This section formats the footer */
 footer {
     margin-top: 2rem;
