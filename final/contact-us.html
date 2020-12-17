@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sourdough Paradise</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <header>
+        <a href="index.html" class="heading">
+            <img id="header_logo" src="./images/icon-64.png" alt="Breadloaf Logo" />
+        </a>
+        <section class="heading">
+            <a href="index.html" class="heading">
+                <h1>Sourdough Paradise</h1>
+            </a> </section>
+        <nav class="ham-nav">
+            <!-- El Hamburguesa -->
+            <label for="hamburger">&#9776;</label>
+            <input type="checkbox" id="hamburger" />
+            <!-- Menu Items -->
+            <div class="ham-items">
+                <a href="index.html">Home</a>
+                <a href="starter-care.html">Care and Feeding</a>
+                <a href="recipe-1.html">Recipe</a>
+            </div>
+
+        </nav>
+    </header>
+    <main>
+
+        <div id="feedback"></div>
+        <div id="contact-us-head"><h3>Contact Us</h3></div>
+
+        <form id="contact-form" action="/contact" method="post">
+            <ul>
+                <li>
+                    <label for="first-name">First Name:</label><br>
+                    <input type="text" id="name-first" name="first_name" required pattern="[a-zA-Z]+">
+                </li>
+                <li>
+                    <label for="name-last">Last Name:</label><br>
+                    <input type="text" id="name-last" name="last_name" required pattern="\w{2}\w*">
+                </li>
+                <li>
+                    <label for="email-addr">Email Address:</label><br>
+                    <input type="email" id="email-addr" name="email" required placeholder="abc@xyz.com" pattern="\w+@\w+\.\w+">
+                </li>
+                <li>
+                    <label for="comment">Comments:</label><br>
+                    <input type="text" id="comment" name="comments" placeholder="Comments" required>
+                </li>
+                <li class="button">
+                    <button type="submit">Contact Us!</button>
+                </li>
+            </ul>
+        </form>
+
+
+
+    </main>
+    <footer>
+       
+        <nav class="social">
+            <a href="https://facebook.com">
+                <img src="./images/facebook-logo.png" alt="Facebook icon">
+            </a>
+            <a href="https://twitter.com">
+                <img src="./images/twitter-logo.png" alt="Twitter icon">
+            </a>
+            <a href="https://www.instagram.com">
+                <img src="./images/instagram-logo.png" alt="Instagram icon">
+            </a>
+        </nav>
+        <p class="credits">Copyright &copy;2020 Sourdough Paradise | All Rights Reserved | <a href="#">Privacy
+                & Cookie Statement</a> | <a href="../site-plan-final-project.html" alt="Site Plan">Site Plan</a> | Reid
+            Bolander</p>
+    </footer>
+    <script>
+        // get the feedback div element so we can do something with it.
+        const feedbackElement = document.getElementById('feedback');
+        // get the form element so we can read what was entered in it.
+        const formElement = document.forms[0];
+        
+        // Want to hide the form after the user submits a reservation
+        const contactForm = document.getElementById('contact-form');
+        const contactHead = document.getElementById('contact-us-head');
+
+        // add a 'listener' to wait for a submission of our form. When that happens run the code below.
+        formElement.addEventListener('submit', function(e) {
+          // stop the form from doing the default action
+          e.preventDefault();
+          // set the contents of our feedback element to a message letting the user know the form was submitted successfully. Notice that we pull the name that was entered in the form to personalize the message!
+          feedbackElement.innerHTML = "<h3>Hello " + formElement.first_name.value + "! Thank you for your message. We will get back with you as soon as possible!</h3>";
+          // make the feedback element visible.
+          feedbackElement.style.display = "block";
+          // Hide the contact us form after submit
+          contactForm.style.display = "none";
+          contactHead.style.display = "none";
+        });
+      </script>
+</body>
+
+</html>
